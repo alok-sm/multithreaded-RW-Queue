@@ -49,7 +49,7 @@ void main () {
 		readCount: counts number of adjacent read threads to be spawned
 	*/
 	for(i = 0; i < NUM_THREADS; i++) {
-		action = rand() > RAND_MAX/2; // Randomly generate read or write tasks
+		action = rand() > RAND_MAX/2; // Randomly generate read(1) or write(0) tasks
 		if(action == READ_FLAG)
 			readCount++; //increment number of adjacent read threads to be spawned
 		else{
