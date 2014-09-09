@@ -23,7 +23,7 @@ void *write(void *arg) {
 	printf("in write\n");
 	int i;
 	for(i = 0; i<SHARED_ARR_SIZE; i++)
-		sharedArr[i] = rand() % 100; //Writing shared array
+		sharedArr[i] = rand() % 100; //Writing shared array with values b/w 0 and 99 inclusive
 	pthread_mutex_unlock(&mutex); // Release Mutex
 	pthread_exit(NULL); // Terminate pthread
 }
